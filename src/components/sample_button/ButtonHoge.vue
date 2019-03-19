@@ -3,15 +3,17 @@
     <div>
       <input v-model="mes" type="text"/>
     </div>
-    <div>
-      <button @click="hoge()">say!!</button>
-    </div>
+    <HogeButton :message="mes"/>
+    <HogeFunctionButton :message="hoge"/>
   </div>
 </template>
 
 <script>
+import HogeButton from './HogeButton'
+import HogeFunctionButton from './HogeFunctionButton'
 export default {
   name: 'ButtonHoge',
+  components: {HogeButton, HogeFunctionButton},
   data () {
     return {
       mes: ''
@@ -19,7 +21,7 @@ export default {
   },
   methods: {
     hoge () {
-      alert(`Say ${this.mes} !!`)
+      alert(`Hoge ${this.mes} FunctionProp`)
     }
   }
 }

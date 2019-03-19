@@ -3,6 +3,8 @@
     <HelloWorld />
     <br />
     <ButtonHoge />
+    <br />
+    <SpTodo />
 <!-- <router-view/> -->
   </div>
 </template>
@@ -10,9 +12,10 @@
 <script>
 import HelloWorld from './components/sample_hoge/HelloWorld'
 import ButtonHoge from './components/sample_button/ButtonHoge'
+import SpTodo from './components/sample_todo/SpTodo'
 export default {
   name: 'App',
-  components: {ButtonHoge, HelloWorld}
+  components: {SpTodo, ButtonHoge, HelloWorld}
 }
 </script>
 
