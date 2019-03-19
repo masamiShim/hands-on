@@ -1,20 +1,26 @@
 <template>
+  <!-- ここにHTMLを書いてく -->
   <div class="hello">
     <div>
+      <!-- v-modelを指定すると値を双方向バインディングしてくれる -->
       <input v-model="msg" />
     </div>
+    <!-- {{}}　mustash←で囲むと scriptの要素を表示できる -->
     <span>{{ hello() }}</span>
   </div>
 </template>
 
 <script>
 export default {
+  // コンポーネントの名前
   name: 'HelloWorld',
+  // このコンポーネントが保持してるプロパティ
   data () {
     return {
       msg: ''
     }
   },
+  // コンポーネントのメソッド, computedもあるけど今回は扱わず
   methods: {
     hello () {
       if (this.msg.length === 0) {

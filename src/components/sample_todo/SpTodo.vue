@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Todo Sample</h1>
+    <!-- キャメルケースで書くとケバブケースじゃないと受け取れなかった気が。。。 -->
     <SpTodoCreator @add-task="addTask" />
     <SpTodoList :tasks="todo" />
   </div>
