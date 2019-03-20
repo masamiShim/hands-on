@@ -5,7 +5,7 @@
       <!-- v-modelを指定すると値を双方向バインディングしてくれる -->
       <input v-model="msg" />
     </div>
-    <!-- {{}}　mustash←で囲むと scriptの要素を表示できる -->
+    <!-- {{}} mustash←で囲むと scriptの要素を表示できる -->
     <span>{{ hello() }}</span>
   </div>
 </template>
@@ -26,6 +26,7 @@ export default {
       if (this.msg.length === 0) {
         return ''
       }
+      // テンプレート記法バッククォートで囲む
       return `Hello ${this.msg}`
     }
   }
@@ -33,6 +34,7 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- スコープ付きのスタイルが書ける。ここで書いたcssはこのコンポーネント無いでしか適用されない -->
 <style scoped>
 h1, h2 {
   font-weight: normal;

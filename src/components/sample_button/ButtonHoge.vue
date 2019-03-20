@@ -9,7 +9,9 @@
 </template>
 
 <script>
-import HogeButton from './HogeButton'
+// コンポーネントを使う場合はimportする必要あり
+// @はwebpackの設定でsrcフォルダからの相対パスとなる
+import HogeButton from '@/HogeButton'
 import HogeFunctionButton from './HogeFunctionButton'
 export default {
   name: 'ButtonHoge',
